@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Coompatible" content = "IE=edge">
+    <meta name = "viewport" contern = "width = device-width,
+    initial-scale=1.0">
+    <title> Personal Website</title>
+    <link rel="stylesheet" href  = "style.css">
+</head>
+
+<body>
+
+    <header class = "header">
+        <a href="#" class="logo"> Sri Duggirala</a>
+
+        <nav class = "navbar">
+            &nbsp 
+            <a href = "#home" id="h">Home</a>
+            &nbsp &nbsp 
+            <a href = "#resume">Resume/CV</a>
+        </nav>
+
+    </header>
+
+    <section id="home" class = "home">
+        <div  class = "home-content">
+            <h1> Hello, I'm Sri Duggirala</h1>
+            <h3>Computer Science Student</h3>
+            <p> I'm a Freshman at the University of Michigan - Ann Arbor studying Computer Science, and I aspire to pursue a career in Software Engineering or Quantitative Finance. My underlying passion for mathematics and logic drives me to apply myself in technical disciplines, challenge my perspective, and push my limits as I chase after new frontiers of knowledge.
+            </p>
+            
+        </div>
+        <div class = "image">
+            <img src="ResumePic.png">
+        </div>
+        
+    </section>
+    <!-- Resume Section-->
+    <section id="resume" class="about" >
+        
+        <iframe  class="myPDF" src="WebResume.png" framborder="0"></iframe>
+    </section>
+
+    <script src="back.js"></script>
+    <!-- Include jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+<script>
+  $(document).ready(function () {
+    // Check for hash value in the URL
+    if (window.location.hash) {
+      // Smoothly scroll to the target section
+      $('html, body').animate(
+        {
+          scrollTop: $(window.location.hash).offset().top,
+        },
+        1000 // Adjust the duration as needed
+      );
+    }
+
+    // Handle smooth scrolling on internal links
+    $('a[href^="#"]').on('click', function (event) {
+      var target = $(this.getAttribute('href'));
+      if (target.length) {
+        event.preventDefault();
+        $('html, body').animate(
+          {
+            scrollTop: target.offset().top,
+          },
+          800 // Adjust the duration as needed
+        );
+      }
+    });
+  });
+</script>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
